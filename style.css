@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+/* CSS Reset  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-image: url('./images/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#wrapper {
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0.5rem;
+}
+
+.music-container {
+    width: 350px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 40px 100px rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    overflow: hidden;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.song_name2 {
+    margin-bottom: 10px;
+}
+
+.movie_name {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.artist_name {
+    margin-bottom: 1rem;
+}
+
+@keyframes slide {
+    from {
+        left: 0;
+    }
+    to {
+        left: 100%;
+    }
+}
+
+.disc {
+    height: 150px;
+    width: 150px;
+    margin: 2rem;
+    border-radius: 50%;
+}
+
+#cover_img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.active {
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.music_controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 1rem 0 0.5rem 0;
+}
+
+#prev,
+#next {
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.5s;
+    background-color: #fff;
+}
+
+#prev:hover,
+#next:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+#play {
+    font-size: 2rem;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+
+#play:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+#audio_seek {
+    margin: 1rem 0;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.progress_container {
+    width: 100%;
+}
+
+.duration_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+#progress_box {
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 23px;
+    position: relative;
+    border: none;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+#progress {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background: rgba(0, 212, 255, 1);
+    border-radius: 23px;
+    border: none;
+    outline: none;
+    appearance: none;
+    transition: width 0.5;
+    -o-transition: width 0.5;
+    -moz-transition: width 0.5;
+    -webkit-transition: width 0.5;
+}
+
+@media (min-width:0px) and (max-width:319px) {
+    .music-container {
+        padding: 0.8rem;
+    }
+    .movie_name {
+        font-size: 1.2rem;
+    }
+    .song_name2 {
+        font-size: 1rem;
+    }
+    .artist_name {
+        font-size: 1rem;
+        text-align: center;
+    }
+    #prev,
+    #next {
+        height: 40px;
+        width: 40px;
+        padding: 1rem;
+    }
+    #play {
+        height: 50px;
+        width: 50px;
+        padding: 1rem;
+    }
+}

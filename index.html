@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="shortcut icon" href="./images/disc.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+    <div id="wrapper">
+        <div class="music-container">
+            <p>Movie / Album - <span class="movie_name">Luka Chuppi</span></p>
+            <div class="disc">
+                <img src="./images/duniya.jfif" alt="" id="cover_img">
+            </div>
+            <h3 class="song_name2">Duniyaa</h3>
+            <p class="artist_name">Abhijit Vaghani, Akhil, Dhvani, Bob</p>
+            <audio src="./Music/Duniya - Luka Chuppi 128 Kbps.mp3"></audio>
+
+            <!-- ----range----  -->
+            <div class="progress_container">
+                <div class="duration_container">
+                    <div id="current_duration">0:00</div>
+                    <div id="total_duration">03:42</div>
+                </div>
+                <div id="progress_box">
+                    <div id="progress"></div>
+                </div>
+            </div>
+
+            <!-- ---controls---  -->
+            <div class="music_controls">
+                <i class="fa-solid fa-backward-step" id="prev" title="Previous"></i>
+                <i class="fa-solid fa-play" id="play" title="Play"></i>
+                <i class="fa-solid fa-forward-step" id="next" title="Next"></i>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
